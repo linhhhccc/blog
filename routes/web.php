@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('post/create', 'PostController@create');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/linhdeptrai', function(){
-    return view('linhdeptrai');
-});
+Route::post('post', 'PostController@store');
